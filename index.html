@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="myHead">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-social.css" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script src="assets/javascript/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="assets/javascript/sketch.js"></script>
+    <script language="javascript" type="text/javascript" src="assets/javascript/bird.js"></script>
+    <script language="javascript" type="text/javascript" src="assets/javascript/pipe.js"></script>
+    <script language="javascript" type="text/javascript" src="assets/libraries/p5.js"></script>
+    <script language="javascript" src="assets/libraries/p5.dom.js"></script>
+    <script language="javascript" src="assets/libraries/p5.sound.js"></script>
+    <title>Pitch Ball</title>
+</head>
+<div class="login-page">
+    <div class="row title-row">
+        <div class="col-lg-12">
+            <img class="img-logo" src="assets/images/logoWhite.png">
+        </div>
+    </div>
+    <div class="row login-row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 col-login-box">
+            <div class="row login-header">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <h3>Sign in with</h3>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+            <div class="row login-links">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <a class="btn btn-block btn-social btn-google">
+                        <span class="fa fa-google"></span>Google
+                    </a>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+            <div class="row row-or-separator">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <p><span>or</span></p>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <div class="row row-input-login">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="row row-incorrect-credentials-login">
+                        <div class="col-lg-2"></div>
+                            <div class="col-lg-8">
+                                <p class="incorrect-credentials-login"><i class="fa fa-warning fa-fw warning-red"></i>Incorrect email or password</p>
+                            </div>
+                        <div class="col-lg-2"></div>
+                    </div>
+                    <form>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                            <input class="form-control" id="userEmail" type="email" placeholder="Email address" required>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+                            <input class="form-control" id="userPassword" type="password" placeholder="Password" required>
+                        </div>
+                        <input type="submit" id="loginBtn" class="btn btn-secondary" value="Sign In">
+                    </form>
+                    <p>Don't have an account? <span><a href="#" id="signUpLoginBtn">Sign up</a></span></p>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+
+<div class="signup-page">
+    <div class="row title-row">
+        <div class="col-lg-12">
+            <img class="img-logo" src="assets/images/logoWhite.png">
+        </div>
+    </div>
+    <div class="row row-back-to-login-page">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h3 class="back-to-login-page">< Back to login page</h3>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <div class="row signup-row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 col-signup-box">
+            <div class="row signup-header">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <h3>Sign Up</h3>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+            <div class="row row-signup">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                <div class="row row-email-exists">
+                    <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <p class="email-exist-message"><i class="fa fa-warning fa-fw warning-red"></i>&nbsp;Email already exists</p>
+                        </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                    <form>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                            <input class="form-control" id="signUpName" type="text" placeholder="Your name" required>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
+                            <input class="form-control" id="signUpUserEmail" type="email" placeholder="Email address" required>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+                            <input class="form-control" id="signUpUserPassword" type="password" minlength="8" placeholder="Password" required>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+                            <input class="form-control" id="signUpConfirmPassword" type="password" minlength="8" placeholder="Confirm password" required>
+                        </div>
+                        <div class="row row-password-not-matched">
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-8">
+                                <p class="password-not-matched"><i class="fa fa-warning fa-fw warning-red"></i>&nbsp;Password not matched!</p>
+                            </div>
+                            <div class="col-lg-2"></div>
+                        </div>
+                        <input type="submit" id="signUpBtn" class="btn btn-secondary" value="Sign Up">
+                    </form>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+
+<div class="home-page">
+    <div class="row title-row">
+        <div class="col-lg-12">
+            <img class="img-logo" src="assets/images/logoWhite.png">
+        </div>
+    </div>
+    <div class="row home-page-row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 col-home-page-box">
+            <div class="row home-page-header">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <h3>Welcome, <span class="playerName"></span>!</h3>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            <div class="row row-home-menu">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <button class="btn btn-secondary" id="playGameBtn">Play Game</button>
+                    <button class="btn btn-secondary" id="leaderboardBtn">Leaderboard</button>
+                    <button class="btn btn-secondary" id="signOutBtn">Sign Out</button>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+
+<div class="challenge-page">
+    <div class="row title-row">
+        <div class="col-lg-12">
+            <img class="img-logo" src="assets/images/logoWhite.png">
+        </div>
+    </div>
+    <div class="row row-back-to-main-menu">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h3 class="back-to-main-menu">< Back to main menu</h3>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <div class="row challenge-page-row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 col-challenge-page-box">
+            <div class="row challenge-page-header">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <h3>Who do you want to challenge?</h3>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            <div class="row row-challenge-email">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="row row-friend-not-found">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <p class="friend-email-message"><i class="fa fa-warning fa-fw warning-red"></i>&nbsp;Email not found</p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                    </div>
+                    <form>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
+                            <input class="form-control" id="challengeEmail" type="email" placeholder="Your friend's email" required>
+                        </div>
+                        <input type="submit" class="btn btn-secondary" id="challengeEmailBtn" value="Challenge">
+                    </form>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+
+<div class="existing-challenge-page">
+    <div class="row title-row">
+        <div class="col-lg-12">
+            <img class="img-logo" src="assets/images/logoWhite.png">
+        </div>
+    </div>
+    <div class="row row-back-to-main-menu">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h3 class="back-to-main-menu">< Back to main menu</h3>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <div class="row existing-row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 col-existing-box">
+            <div class="row existing-header">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <h3>My Challenges</h3>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            <div class="row row-existing-table">
+                <div class="col-lg-12">
+                    <table id="challengeTable" class="table table-hover table-existing">
+                        <tr>
+                            <th>Challenger</th>
+                            <th>Score<br> <span class="score-desc">(You - Challenger)</span></th>
+                            <th>Status</th>
+                            <th colspan="2">Action</th>
+                        </tr>
+                        <tr class="existing-empty-message">
+                            <th colspan="4">No Challenges</th>
+                        </tr>
+                        <tr class="challenge-entry" cid="Hhauwhduawyduhi">
+                            <td>William</td>
+                            <td><span class="win-score">5</span> - <span class="lose-score">0</span></td>
+                            <td>Pending</td>
+                            <td><button class="btn btn-success acceptBtn">Accept</button></td>
+                            <td><button class="btn btn-danger rejectBtn">Reject</button></td>
+                        </tr>
+                        <tr class="challenge-entry">
+                            <td>William</td>
+                            <td><span class="win-score">5</span> - <span class="lose-score">0</span></td>
+                            <td>Your Turn</td>
+                            <td colspan="2"><button class="btn btn-secondary playBtn">Play</button></td>
+                        </tr>
+                        <tr class="challenge-entry">
+                            <td>William</td>
+                            <td><span class="win-score">5</span> - <span class="lose-score">0</span></td>
+                            <td>Foe's Turn</td>
+                            <td colspan="2"><button class="btn btn-secondary playBtn disabled">Play</button></td>
+                        </tr>
+                        <tr class="challenge-entry">
+                            <td>William</td>
+                            <td><span class="win-score">5</span> - <span class="lose-score">0</span></td>
+                            <td>Foe's Turn</td>
+                            <td colspan="2"><button class="btn btn-secondary playBtn disabled">Play</button></td>
+                        </tr>
+                        <tr class="challenge-entry">
+                            <td>William</td>
+                            <td><span class="win-score">5</span> - <span class="lose-score">0</span></td>
+                            <td>Pending</td>
+                            <td><button class="btn btn-success acceptBtn">Accept</button></td>
+                            <td><button class="btn btn-danger rejectBtn">Reject</button></td>
+                        </tr>
+                        <tr class="challenge-entry">
+                            <td>William</td>
+                            <td><span class="win-score">5</span> - <span class="lose-score">0</span></td>
+                            <td>Your Turn</td>
+                            <td colspan="2"><button class="btn btn-secondary playBtn">Play</button></td>
+                        </tr>
+                        <tr class="challenge-entry">
+                            <td>William</td>
+                            <td><span class="win-score">5</span> - <span class="lose-score">0</span></td>
+                            <td>Pending</td>
+                            <td><button class="btn btn-success acceptBtn">Accept</button></td>
+                            <td><button class="btn btn-danger rejectBtn">Reject</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+<div class="challenge-details-page">
+    <div class="row title-row">
+        <div class="col-lg-12">
+            <img class="img-logo" src="assets/images/logoWhite.png">
+        </div>
+    </div>
+    <div class="row row-back-to-main-menu">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h3 class="back-to-my-challenge">< Back to My Challenges</h3>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <div class="row existing-row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 col-challenge-details">
+            <div class="row existing-header">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <h3>My Challenge Details</h3>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            <div class="row row-existing-table">
+                <div class="col-lg-12">
+                    <table id="challengeDetailsTable" class="table table-hover table-existing">
+                        <tr>
+                            <th>Round</th>
+                            <th>Score<br> <span class="score-desc">(You - William)</span></th>
+                        </tr>
+                        <tr class="existing-empty-message">
+                            <th colspan="4">No Challenges</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><span class="win-score">44</span> - <span class="lose-score">32</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><span class="win-score">33</span> - <span class="lose-score">4</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><span class="win-score">77</span> - <span class="lose-score">100</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><span class="win-score">44</span> - <span class="lose-score">65</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><span class="win-score">88</span> - <span class="lose-score">123</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+
+<div class="leaderboard-page">
+    <div class="row title-row">
+        <div class="col-lg-12">
+            <img class="img-logo" src="assets/images/logoWhite.png">
+        </div>
+    </div>
+    <div class="row row-back-to-main-menu">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h3 class="back-to-main-menu">< Back to main menu</h3>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <div class="row leaderboard-row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 col-leaderboard-box">
+            <div class="row leaderboard-header">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <h3>Leaderboard</h3>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            <div class="row row-leaderboard-table">
+                <div class="col-lg-12">
+                    <table id="cityLeaderboardTable" class="table table-hover table-city">
+                    </table>
+                    <table id="worldLeaderboardTable" class="table table-hover table-world">
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+
+<div class="game-page">
+    <div class="row canvas-row">
+        <div class="col-lg-12">
+            <h1 id="points"></h1>
+            <h1 id="greeting"></h1>
+            <h1 id="result"></h1>
+            <div id="sketch-holder"></div>
+        </div>
+    </div>
+</div>
+<script src="assets/javascript/main.js"></script>
+<script language="JavaScript" type="text/javascript" src="assets/javascript/firebase.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</body>
+</html>
+

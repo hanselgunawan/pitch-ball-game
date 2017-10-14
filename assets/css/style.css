@@ -1,0 +1,715 @@
+/* GENERAL */
+html
+{
+    background-color: black;
+}
+
+.img-logo
+{
+    height: 150px;
+}
+
+/* TITLE CSS */
+.title-row
+{
+    height: 100px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.title-row h1
+{
+    color:white;
+}
+
+
+/* LOGIN CSS */
+.login-row
+{
+    margin-top: 150px;
+}
+
+.col-login-box
+{
+    height: 380px;
+    border: 5px solid ghostwhite;
+    border-radius: 15px;
+    color:white;
+}
+
+.login-header h3
+{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-links
+{
+    margin-top: 20px;
+}
+
+.login-links a
+{
+    text-align: center;
+}
+
+.row-or-separator p
+{
+    margin-top: 30px;
+    text-align: center;
+    border-bottom: 1px solid white;
+    line-height: 0.1em;
+}
+
+.row-or-separator p span
+{
+    background:black;
+    padding:0 10px;
+}
+
+.row-input-login .input-group
+{
+    border: 0px solid white;
+    border-radius:5px;
+    margin-bottom: 1px;
+}
+
+.row-input-login .btn-secondary
+{
+    width: 100%;
+    margin-top:1px;
+}
+
+.row-input-login p
+{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.row-incorrect-credentials-login
+{
+    margin-top: -20px;
+}
+
+.incorrect-credentials-login
+{
+    background-color: pink;
+    height: 25px;
+    color:black;
+    border-radius: 5px;
+}
+
+.warning-red
+{
+    color:indianred;
+}
+
+/* SIGN UP */
+.col-signup-box
+{
+    height: 350px;
+    border: 5px solid ghostwhite;
+    border-radius: 15px;
+    color:white;
+}
+
+.signup-header h3
+{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signup-row
+{
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.row-signup
+{
+    margin-top: 20px;
+}
+
+.row-back-to-login-page
+{
+    margin-top: 150px;
+}
+
+.row-back-to-login-page h3:hover
+{
+    text-decoration: underline;
+}
+
+.row-back-to-login-page h3
+{
+    color:white;
+    font-size: 12pt;
+    margin-bottom: 0px;
+}
+
+.row-signup .input-group
+{
+    border: 0px solid white;
+    border-radius:5px;
+    margin-bottom: 1px;
+}
+
+.row-signup .btn-secondary
+{
+    width: 100%;
+    margin-top:1px;
+}
+
+.row-signup p
+{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.row-email-exists
+{
+    margin-top: -40px;
+}
+
+.email-exist-message
+{
+    background-color: pink;
+    height: 25px;
+    color:black;
+    border-radius: 5px;
+}
+
+.row-password-not-matched
+{
+    margin-top: -15px;
+}
+
+.password-not-matched
+{
+    background-color: pink;
+    height: 25px;
+    color:black;
+    border-radius: 5px;
+}
+
+/* HOME PAGE */
+.home-page-row
+{
+    margin-top: 200px;
+}
+
+.home-page-header h3
+{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.col-home-page-box
+{
+    height: 350px;
+    border: 5px solid ghostwhite;
+    border-radius: 15px;
+    color:white;
+}
+
+.row-home-menu
+{
+    margin-top: 30px;
+}
+
+.row-home-menu button
+{
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 18pt;
+}
+
+.row-home-menu button:hover
+{
+    background-color: white;
+    color:black;
+    font-weight: 600;
+    box-shadow: inset 0 0 0 3px #708090;
+}
+
+/* CHALLENGE */
+.challenge-page .row-back-to-main-menu
+{
+    margin-top: 200px;
+    margin-bottom: 0px;
+}
+
+.challenge-page-row
+{
+    margin-top: 0px;
+}
+
+.challenge-page-header h3
+{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.col-challenge-page-box
+{
+    height: 280px;
+    border: 5px solid ghostwhite;
+    border-radius: 15px;
+    color:white;
+}
+
+.row-challenge-email
+{
+    margin-top: 30px;
+}
+
+.row-challenge-email .btn-secondary
+{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.row-friend-not-found
+{
+    margin-top: -10px;
+}
+
+.friend-email-message
+{
+    background-color: pink;
+    height: 25px;
+    color:black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* LEADERBOARD */
+.row-back-to-main-menu
+{
+    margin-top: 150px;
+}
+
+.row-back-to-main-menu h3
+{
+    color:white;
+    font-size: 12pt;
+    margin-bottom: 15px;
+}
+
+.row-back-to-main-menu h3:hover
+{
+    text-decoration: underline;
+}
+
+.leaderboard-header h3
+{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.col-leaderboard-box
+{
+    overflow-y: scroll;
+    height: 450px;
+    border: 5px solid ghostwhite;
+    border-radius: 15px;
+    color:white;
+}
+
+.row-leaderboard-table
+{
+    margin-top: 10px;
+}
+
+.row-leaderboard-table table th, td
+{
+    text-align: center;
+}
+
+.row-leaderboard-table table td
+{
+    vertical-align: middle;
+}
+
+.row-leaderboard-table button
+{
+    font-size: 10pt;
+}
+
+.row-leaderboard-table table
+{
+    text-align: center;
+    width: 100%;
+}
+
+.row-leaderboard-table table .tabs-th a
+{
+    text-decoration: none;
+}
+
+.row-leaderboard-table table .tabs-th
+{
+    width: 33%;
+    padding: 0px;
+    height: 50px;
+}
+
+.row-leaderboard-table table th .a-city
+{
+    background-color: white;
+    color:black;
+}
+
+.row-leaderboard-table table th .a-city-inactive
+{
+    transition: 0.2s all ease-in;
+}
+
+.row-leaderboard-table table th .a-city-inactive:hover
+{
+    background-color: lightgray;
+    color:black;
+    transition: 0.2s all ease-in;
+}
+
+.row-leaderboard-table table th .a-world
+{
+    background-color: white;
+    color:black;
+}
+
+.row-leaderboard-table table th .a-world-inactive
+{
+    transition: 0.2s all ease-in;
+}
+
+.row-leaderboard-table table th .a-world-inactive:hover
+{
+    background-color: lightgray;
+    color:black;
+    transition: 0.2s all ease-in;
+}
+
+.row-leaderboard-table table th a
+{
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    padding-top: 12px;
+    color:white;
+}
+
+.table-tabs
+{
+    border: 1px solid white;
+}
+
+/* CHALLENGE DETAILS */
+
+.col-challenge-details
+{
+    overflow-y: scroll;
+    height: 350px;
+    border: 5px solid ghostwhite;
+    border-radius: 15px;
+    color:white;
+}
+
+/* EXISTING CHALLENGES */
+.existing-header h3
+{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.col-existing-box
+{
+    overflow-y: scroll;
+    height: 450px;
+    border: 5px solid ghostwhite;
+    border-radius: 15px;
+    color:white;
+}
+
+.score-desc
+{
+    font-size: 8pt;
+}
+
+.challenge-entry
+{
+    transition: 0.2s all ease-in;
+}
+
+.playBtn
+{
+    width: 100%;
+}
+
+.challenge-entry:hover
+{
+    background-color: lightgray !important;
+    color:black;
+    transition: 0.2s all ease-in;
+}
+
+.table-existing td
+{
+    font-size: 11pt;
+}
+
+.table-existing tr th:nth-child(1), .table-existing tr th:nth-child(3), .table-existing tr th:nth-child(4)
+{
+    padding-top: 25px;
+}
+
+.row-existing-table
+{
+    margin-top: 10px;
+}
+
+.row-existing-table table th, td
+{
+    text-align: center;
+}
+
+.row-existing-table table td
+{
+    vertical-align: middle;
+}
+
+.row-existing-table button
+{
+    font-size: 10pt;
+}
+
+.row-existing-table table
+{
+    text-align: center;
+    width: 100%;
+}
+
+.row-existing-table table .tabs-th a
+{
+    text-decoration: none;
+}
+
+.row-existing-table table .tabs-th
+{
+    width: 33%;
+    padding: 0px;
+    height: 50px;
+}
+
+.row-existing-table table th .a-city
+{
+    background-color: white;
+    color:black;
+}
+
+.row-existing-table table th .a-city-inactive
+{
+    transition: 0.2s all ease-in;
+}
+
+.row-existing-table table th .a-city-inactive:hover
+{
+    background-color: lightgray;
+    color:black;
+    transition: 0.2s all ease-in;
+}
+
+.row-existing-table table th .a-world
+{
+    background-color: white;
+    color:black;
+}
+
+.row-existing-table table th .a-world-inactive
+{
+    transition: 0.2s all ease-in;
+}
+
+.row-existing-table table th .a-world-inactive:hover
+{
+    background-color: lightgray;
+    color:black;
+    transition: 0.2s all ease-in;
+}
+
+.row-existing-table table th a
+{
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    padding-top: 12px;
+    color:white;
+}
+
+.table-tabs
+{
+    border: 1px solid white;
+}
+
+/* CHALLENGE DETAILS */
+.row-challenge-details-table
+{
+
+}
+
+/*GAME PAGE*/
+
+#points 
+{
+    position: absolute; 
+    font-family: 'Righteous', cursive;
+    color: #ffcc00;
+    left: 50%;
+    top: 5%;
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 2px 2px #ff0000;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.replayButton
+{
+    position: absolute;
+    background-color: gray;
+    font-family: 'Righteous', cursive;
+    color: white;
+    text-shadow: 2px 2px black;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    font-weight: bold;
+    font-size: 24px;
+    left: 45%;
+    top: 57%;
+}
+
+.menuButton
+{
+    position: absolute;
+    background-color: gray;
+    font-family: 'Righteous', cursive;
+    color: white;
+    text-shadow: 2px 2px black;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    font-weight: bold;
+    font-size: 24px;
+    left:45%;
+    top: 64%;
+}
+
+#greeting
+{
+    position: absolute;
+    font-family: 'Righteous', cursive;
+    color: #cccccc;
+    text-shadow: 2px 2px gray;
+/*    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);*/
+    width: 100%;
+    text-align: center;
+    top: 30%;
+    font-size: 80px;
+}
+
+#result 
+{
+    position: absolute;
+    font-family: 'Righteous', cursive;
+    color: #cccccc;
+    text-shadow: 2px 2px grey;
+/*    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);*/
+    left: 0;
+    right: 0;
+    top: 43%;
+    font-size: 40px;
+    visibility: hidden;
+}
+
+.canvas-row
+{
+    border:1px solid white !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+/* HOVER */
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+.hvr-pulse-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.hvr-pulse-grow:hover, .hvr-pulse-grow:focus, .hvr-pulse-grow:active {
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.col-leaderboard-box::-webkit-scrollbar {
+    width: 10px;
+}
+
+.col-leaderboard-box::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.col-challenge-details::-webkit-scrollbar {
+    width: 10px;
+}
+
+.col-challenge-details::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.col-existing-box::-webkit-scrollbar {
+    width: 10px;
+}
+
+.col-existing-box::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+/* LOADING PAGE */
+.loading-row
+{
+    text-align: center;
+    margin-top: 325px;
+}

@@ -4,6 +4,10 @@
 
 ###### This application can be supported by any input that can generate a pitch between 0-2200hz+ on the frequency spectrum.
 
+## Demo
+---
+###### https://hanselgunawan.github.io/pitch-ball-game/
+
 ## Team Member
 ---
 + Frank Chu
@@ -32,13 +36,27 @@
 
 ## How do I play a new game?
 ---
-###### First create a new account by either an e-mail account or logging in/authenticating through Google.
+###### First create a new account / Sign Up by an e-mail account. All the information will be stored into Firebase.
+
+![](https://i.imgur.com/be5UE4Y.gif)
+
+###### Or simply logging in/authenticating through Google.
+
+![](https://i.imgur.com/muuwyDR.gif)
 
 ###### Start a new game instance
 
-###### The two standard methods to play is either to use the Space Bar on the player's keyboard or to use a microphone. Humming or creating different pitches will change the frequency input which will move the player's avatar along the x-axis
+###### The emoji controlled by using a microphone. Humming or creating different pitches will change the frequency input which will move the player's avatar along the x-axis.
 
-###### Move inbetween the openings created by the Obstacles to score points. Each successfully navigated Obstacle will result in one point to the player's score. The highest scores will be recorded for each user and to the leaderboard.
+![](https://i.imgur.com/wMZLW6m.gif)
+
+###### Move inbetween the openings created by the Obstacles to score points. Each successfully navigated Obstacle will result in one point to the player's score. the pipes will move faster as you progress thru the game, and after a certain level it's become more challenging because the pipes will move up and down.
+
+![](https://i.imgur.com/he2NctR.gif)
+
+###### The highest scores will be recorded for each user and to the leaderboard. There's 2 types of leaderboard, the first one based on city, so we can see the top player in that city, the second one is the world leaderboard, which we can see the best player from all over the world.
+
+![](https://i.imgur.com/2CrCdHA.gif)
 
 ###### Get creative with the ways to manipulate the player's avatar! Player's can use alternate forms of input such as a tone generated from a online tone generator or a musical instrument that has direct input into the user's system.
 

@@ -4,6 +4,12 @@
 
 ###### This application can be supported by any input that can generate a pitch between 0-2200hz+ on the frequency spectrum.
 
+## Team Member
+---
++ Frank Chu
++ William Tan
++ Hansel Tritama
++ Andre Gunawan
 
 ## Features
 ---
@@ -16,6 +22,13 @@
 + Ability to challenge friends and other users.
 
 + Randomized Player Emoji Avatar during each new game.
+
+## The technologies that we used
+---
++ Google Firebase. 
++ Google Maps API.
++ HTML5 Geolocation API.
++ P5.JS Library (for sound and visual).
 
 ## How do I play a new game?
 ---

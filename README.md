@@ -64,4 +64,4 @@
 
 ## Anymore questions?
 
-Contact us in the M/W Class!
+Contact me via e-mail: hanselgunawan94@gmail.com

@@ -10,10 +10,10 @@
 
 ## Team Member
 ---
-+ Frank Chu
-+ William Tan
 + Hansel Tritama
++ William Tan
 + Andre Gunawan
++ Frank Chu
 
 ## Features
 ---
